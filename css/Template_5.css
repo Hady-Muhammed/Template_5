@@ -1,0 +1,341 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* End Global Rules */
+/* Start Components */
+.fw-b {
+    font-weight: bold;
+}
+.main-heading {
+    letter-spacing: 2px;
+}
+/* End Components */
+/* Start Header */
+header > ul .nav-item {
+    position: relative;
+}
+header > ul li {
+    transition: 0.3s;
+}
+header > ul li:nth-child(2):hover .menu-1 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10%);
+}
+header .menu-1 {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    top: 200%;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}   
+header .menu-1 a {
+    transition: 0.3s;
+}
+header .menu-1 a:hover {
+    background-color: black;
+    color: white !important;
+}
+
+
+header > ul li:nth-child(3):hover .menu-2 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10%);
+}
+header .menu-2 {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    width: 900%;
+    top: 200%;
+    left: -385%;
+    visibility: hidden;
+    opacity: 0; 
+    transition: 0.3s;
+}   
+header .menu-2 a {
+    transition: 0.3s;
+}
+header .menu-2 a:hover {
+    background-color: black;
+    color: white !important;
+}
+header > ul li:nth-child(4):hover .menu-3 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10%);
+}
+header .menu-3 {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    top: 200%;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}   
+header .menu-3 a {
+    transition: 0.3s;
+}
+header .menu-3 a:hover {
+    background-color: black;
+    color: white !important;
+}
+header > ul li:nth-child(5):hover .menu-4 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10%);
+}
+header .menu-4 {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    top: 200%;
+    left: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}   
+header .menu-4 a {
+    transition: 0.3s;
+}
+header .menu-4 a:hover {
+    background-color: black;
+    color: white !important;
+}
+@media (max-width: 769px) {
+    header nav div {
+        flex-direction: column;
+    }
+}
+@media (max-width: 920px) {
+    .menu-2 {
+        flex-direction: column;
+        width: 600% !important;
+    }
+    .menu-2 > div {
+        width: 100% !important;
+        padding: 0 200px!important;
+    }
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-item {
+    position: relative;
+}
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.593);
+}
+.landing .text {
+    z-index: 1;
+    position: absolute;
+    color: white;
+    top: 34%;
+    left: 20%;
+}
+.landing .text h1 {
+    font-size: 2.7em;
+}
+.landing .text button:hover {
+    background-color: white;
+    font-weight: 500;
+    color: black !important;
+}
+.landing .text span {
+    opacity: 0;
+    animation: ToUp .5s 1s both;
+}
+.landing .text h1 {
+    opacity: 0;
+    animation: ToUp .5s 2s both;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.landing .text button {
+    opacity: 0;
+    animation: ToUp .5s 3s both;
+}
+@media (max-width: 830px) {
+    .landing {
+        height: 90vh;
+    }
+    .carousel-inner {
+        width: 175%;
+    }
+}
+@media (max-width: 550px) {
+    .carousel-inner {
+        width: 230%;
+    }
+}
+@media (max-width: 400px) {
+    .carousel-inner {
+        width: 325%;
+    }
+}
+.carousel-control-next {
+    z-index: 5;
+}
+/* End Landing */
+/* Start Category */
+.category .container img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.category .container .img {
+    overflow: hidden;
+} 
+.category .container img:hover {
+    transform: scale(1.1);
+}
+.category .container  {
+    position: relative;
+}
+.category .container h3 , 
+.category .container p {
+    position: absolute;
+    font-weight: 500;
+    top: 10%;
+    left: 10%;
+}
+.category .container p {
+    top: 17%;
+    color: #777;
+}
+@media (max-width: 992px) {
+    .category .row div:last-child .container {
+        margin-top: 48px;
+    }
+}
+.category .row > div:last-child p {
+    margin-block: -26px;
+}
+@media (max-width: 650px) {
+    .category .container h3 , 
+    .category .container p {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    } 
+    .category .container p {
+        top: 20%;
+    }
+    .category .row {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+}
+/* End Category */
+/* Start Products */
+.products {
+    background-color: #f9f9f9;
+}
+.products .row .col-md-4 {
+    margin: 35px 0;
+}
+.products .row  .container .img {
+    position: relative;
+}
+.products .row  .container .img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.534);
+    transition: 0.5s;
+}
+.products .row  .container:hover .img::before {
+    opacity: 1;
+}
+.products .row  .container .img .settings {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.2s;
+}
+.products .row  .container .img .settings .icon {
+    padding: 20px;
+    background-color: white;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.products .row  .container:hover .settings {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.products .row p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.products .row span {
+    padding: 0;
+    margin: 0;
+    color: #777;
+}
+/* End Products */
+/* Start Email */
+.email {
+    background-color: #f9f9f9;
+}
+.email h4 {
+    font-weight: 400;
+}
+.email p {
+    color: #777;
+}
+.gallery img:hover {
+    filter: grayscale(10);
+}
+@media (max-width: 769px) {
+    .email form {
+        flex-direction: column;
+
+    }
+    .email form input {
+        width: 100% !important;
+    }
+}
+/* End Email */
+/* Start Footer */
+footer {
+    background-color: #f9f9f9;
+}
+/* End Footer */
+/* Start Animation */
+@keyframes ToUp {
+    from {
+        opacity: 0;
+    }   
+    to {
+        opacity: 1;
+        transform: translateY(-20px);
+    } 
+}
+/* End Animation */
