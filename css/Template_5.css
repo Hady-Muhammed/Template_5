@@ -284,6 +284,13 @@ header .menu-4 a:hover {
     background-color: white;
     margin: 0 3px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.products .row  .container .img .settings .icon:hover {
+    background-color: black;
+}
+.products .row  .container .img .settings .icon:hover i {
+    color: white;
 }
 .products .row  .container:hover .settings {
     opacity: 1;
