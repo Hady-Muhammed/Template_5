@@ -266,6 +266,15 @@ header .menu-4 a:hover {
     background-color: rgba(0, 0, 0, 0.534);
     transition: 0.5s;
 }
+.products .t .col-md-4:first-child  .container .img:after {
+    content: "sale";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 20px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.534);
+}
 .products .row  .container:hover .img::before {
     opacity: 1;
 }
