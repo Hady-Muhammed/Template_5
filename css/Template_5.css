@@ -4,6 +4,10 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 /* End Global Rules */
 /* Start Components */
 .fw-b {
